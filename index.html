@@ -13126,8 +13126,21 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s2">&quot;data&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_trade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;GTA_all_data.xlsx&quot;</span><span class="p">)</span>
+<span class="n">df_trade</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13140,21 +13153,358 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>D
-A
-T
-A
-</pre>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State Act ID</th>
+      <th>Intervention ID</th>
+      <th>State Act Title</th>
+      <th>Announcement Date</th>
+      <th>GTA Evaluation</th>
+      <th>Currently in force</th>
+      <th>Inception Date</th>
+      <th>Removal Date</th>
+      <th>Implementing Jurisdiction</th>
+      <th>Intervention Type</th>
+      <th>MAST chapter</th>
+      <th>Affected Sectors</th>
+      <th>Affected Products</th>
+      <th>Affected Jurisdiction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>53</td>
+      <td>17542</td>
+      <td>Zambia: Increase in fuel import duty to 25% fr...</td>
+      <td>2008-12-26</td>
+      <td>Red</td>
+      <td>yes</td>
+      <td>2008-12-26</td>
+      <td>NaN</td>
+      <td>Zambia</td>
+      <td>Import tariff</td>
+      <td>Tariff measures</td>
+      <td>333</td>
+      <td>271012, 271019</td>
+      <td>France</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>53</td>
+      <td>17542</td>
+      <td>Zambia: Increase in fuel import duty to 25% fr...</td>
+      <td>2008-12-26</td>
+      <td>Red</td>
+      <td>yes</td>
+      <td>2008-12-26</td>
+      <td>NaN</td>
+      <td>Zambia</td>
+      <td>Import tariff</td>
+      <td>Tariff measures</td>
+      <td>333</td>
+      <td>271012, 271019</td>
+      <td>United Arab Emirates</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>53</td>
+      <td>17542</td>
+      <td>Zambia: Increase in fuel import duty to 25% fr...</td>
+      <td>2008-12-26</td>
+      <td>Red</td>
+      <td>yes</td>
+      <td>2008-12-26</td>
+      <td>NaN</td>
+      <td>Zambia</td>
+      <td>Import tariff</td>
+      <td>Tariff measures</td>
+      <td>333</td>
+      <td>271019</td>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>53</td>
+      <td>17542</td>
+      <td>Zambia: Increase in fuel import duty to 25% fr...</td>
+      <td>2008-12-26</td>
+      <td>Red</td>
+      <td>yes</td>
+      <td>2008-12-26</td>
+      <td>NaN</td>
+      <td>Zambia</td>
+      <td>Import tariff</td>
+      <td>Tariff measures</td>
+      <td>333</td>
+      <td>271012, 271019</td>
+      <td>Portugal</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>92</td>
+      <td>20128</td>
+      <td>Argentina: Non-automatic licensing requirement...</td>
+      <td>2009-03-25</td>
+      <td>Red</td>
+      <td>yes</td>
+      <td>2009-03-25</td>
+      <td>NaN</td>
+      <td>Argentina</td>
+      <td>Import licensing requirement</td>
+      <td>E1 Non-automatic import-licensing procedures o...</td>
+      <td>429, 439, 441, 476, 479, 381</td>
+      <td>731815, 841510, 841581, 841590, 843360, 852349...</td>
+      <td>Spain</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 </div>
 
 </div>
+
+</div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our project, we are looking to explore global economic developments pertaining to trade protectionism. An interesting dataset we came across was one posted by Global Trade Alert, an initiative by the Center for Policy Research which provides full coverage of the trade-discriminatory measures all across the globe. We are interested in observing the trends of these measures over the past few years, how this has evolved from region-to-region, what types of trade discriminatory measures countries have resorted to, and how some of the measures implemented align with the country’s said objectives.</p>
+<p>The dataset provided by Global Trade Alert provides tons of information that helps us to answer these questions. Starting from 2008, the dataset lists which countries have implemented such measures, along with the countries they are implemented on. It provides the type of the measure – non-tariff or tariff, on what products, and whether the measure is currently in force. GTA also have a unique “color” indicator which states the serious of measure, with red classifying those which certainty discriminates foreign commercial interests, yellow which could potential deter foreign commercial interests, and green which pertain to more liberalizing (i.e. Anti-trade) measures.</p>
+<p>As mentioned earlier, this dataset provides an opportunity to pursue one, or many of our said goals. With the rapid global trade developments across the world, ranging from US-China trade war, China’s New Silk Road, and Brexit, it would be interesting to conduct a time-series analysis on the change in the global trade landscape since the 2008 recession. We are currently looking for a data set that matches the one with GTA but goes further back than 2008. Another key question we look to analyze is how the global landscape has evolved since the 2008 financial crises. Part of the severity of the recession in 2008 was linked to “global interconnectedness,” where trouble in the major developed and developing countries had subsequent negative effects on other smaller and more dependent economies. It will be interesting to whether countries have now taken steps to protect themselves from external factors by insulating themselves from the global trade environment, either relying on themselves for the provisions of goods and services or focusing on more “regional” trade developments as opposed to global.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_energy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;energy.csv&quot;</span><span class="p">)</span>
+<span class="n">df_energy</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Year</th>
+      <th>Production.Coal</th>
+      <th>Consumption.Commercial.Coal</th>
+      <th>Consumption.Commercial.Distillate Fuel Oil</th>
+      <th>Consumption.Commercial.Geothermal</th>
+      <th>Consumption.Commercial.Hydropower</th>
+      <th>Consumption.Commercial.Kerosene</th>
+      <th>Consumption.Commercial.Liquefied Petroleum Gases</th>
+      <th>Consumption.Commercial.Natural Gas</th>
+      <th>...</th>
+      <th>Price.Industrial.Coal</th>
+      <th>Price.Industrial.Distillate Fuel Oil</th>
+      <th>Price.Industrial.Kerosene</th>
+      <th>Price.Industrial.Liquefied Petroleum Gases</th>
+      <th>Price.Industrial.Natural Gas</th>
+      <th>Price.Industrial.Other Petroleum Products</th>
+      <th>Price.Transportation.Coal</th>
+      <th>Price.Transportation.Distillate Fuel Oil</th>
+      <th>Price.Transportation.Liquefied Petroleum Gases</th>
+      <th>Price.Transportation.Natural Gas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Utah</td>
+      <td>1960</td>
+      <td>114689.0</td>
+      <td>2644.0</td>
+      <td>2110.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>33.0</td>
+      <td>450.0</td>
+      <td>10482.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Vermont</td>
+      <td>1960</td>
+      <td>0.0</td>
+      <td>769.0</td>
+      <td>2434.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>245.0</td>
+      <td>367.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Rhode Island</td>
+      <td>1960</td>
+      <td>0.0</td>
+      <td>210.0</td>
+      <td>8046.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>95.0</td>
+      <td>224.0</td>
+      <td>1753.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Michigan</td>
+      <td>1960</td>
+      <td>0.0</td>
+      <td>24324.0</td>
+      <td>18710.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>3206.0</td>
+      <td>735.0</td>
+      <td>44506.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Missouri</td>
+      <td>1960</td>
+      <td>61027.0</td>
+      <td>11149.0</td>
+      <td>6411.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>8546.0</td>
+      <td>4272.0</td>
+      <td>33826.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 85 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We are also considering a data set from the CORGIS data project provided by the U.S. Energy and Information Adminstration. It contains data organized by year and state on the production of coal, as well as the consumption (in BTUs), price, and expenditure of multiple fuel sources in various sectors of the economy. These fuel sources include coal, hydropower, solar, wind, wood, natural gas, etc. Sectors are broken down into commercial, electric power, industrial, residential, transportation, and refinery.</p>
+<p>We would like to see how different renewable energy initiatives have affected energy consumption in different states. For this we can compare how energy consumption levels change over time with the renewable energy initiatives listed in the Database of State Incentives for Renewables &amp; Efficiency. The DSIRE dataset lists initiatives by state and includes data on the incentives offered/policies enacted, program inception dates, and the goal of the project.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
